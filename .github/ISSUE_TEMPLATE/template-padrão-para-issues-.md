@@ -10,7 +10,8 @@ assignees: ''
 ## Descrição
 
 ## Tarefas
-
+- [ ] tarefa1
+- [ ] tarefa2
 ## Critérios de aceitação
 
 ## Informações adicionais
