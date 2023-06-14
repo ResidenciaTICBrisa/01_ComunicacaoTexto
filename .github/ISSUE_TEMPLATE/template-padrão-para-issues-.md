@@ -1,7 +1,7 @@
 ---
-name: "#[numero da issue] texto"
+name: 'Template-padrão-para-issues '
 about: template básico das issues
-title: ''
+title: "#[numero da issue] texto"
 labels: ''
 assignees: ''
 
