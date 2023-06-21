@@ -27,5 +27,5 @@
 |:---------:|:-----:|:-----------:|
 | Encontrar plug-in open source que atenda as funcionalidades | 28/06 | Geovane Freitas, Gabriel Barbosa, João Pedro, Vitor Borges |
 | Criar checklist para avaliação dos plug-ins| 28/06 | Geovane Freitas, Gabriel Barbosa, João Pedro, Vitor Borges |
-| Estudar modelos de dados | Izabella Alves |
+| Estudar modelos de dados | 28/06 | Izabella Alves
 | Elaborar Benchmark dos plugins | 05/06 | Geovane Freitas, Gabriel Barbosa, João Pedro, Izabella Alves, Vitor Borges |
