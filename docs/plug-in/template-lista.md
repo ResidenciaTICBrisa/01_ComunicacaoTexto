@@ -1,4 +1,4 @@
-## introdução 
+## Introdução 
 
 Esse arquivo serve para criar o esqueleto da tabela dos plug-ins. Qualquer alteração na tabela deve ser feita nesse arquivo e não no oficial.
 
