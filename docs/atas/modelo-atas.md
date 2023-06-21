@@ -1,4 +1,4 @@
-# Ata da Reunião (nome) - (data)
+# Ata da Reunião (número) - (data)
 
 ## Lista de presença
 
@@ -27,4 +27,3 @@
 |(Descrição)|(Data)| (Integrantes)|
 |(Descrição)|(Data)| (Integrantes)|
 |(Descrição)|(Data)| (Integrantes)|
-
