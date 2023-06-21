@@ -25,6 +25,7 @@
 
 | Atividade | Prazo | Responsável |
 |:---------:|:-----:|:-----------:|
+| Criar modelo de atas para reunião | 22/06 | Vitor Borges | 
 | Encontrar plug-in open source que atenda as funcionalidades | 28/06 | Geovane Freitas, Gabriel Barbosa, João Pedro, Vitor Borges |
 | Criar checklist para avaliação dos plug-ins| 28/06 | Geovane Freitas, Gabriel Barbosa, João Pedro, Vitor Borges |
 | Estudar modelos de dados | 28/06 | Izabella Alves
