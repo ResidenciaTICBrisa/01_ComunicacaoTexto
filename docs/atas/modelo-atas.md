@@ -14,3 +14,9 @@
 |:-----------------:|:------------------:|:-----:|
 | (Hora:Minutos)    | (Hora:Minutos) | (local) |
 
+## Pautas
+
+* (Pauta 01)
+* (Pauta 02)
+* (Pauta 03)
+
