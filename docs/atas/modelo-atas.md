@@ -20,3 +20,11 @@
 * (Pauta 02)
 * (Pauta 03)
 
+## Atividades Definidas
+
+| Atividade | Prazo | Responsável |
+|:---------:|:-----:|:-----------:|
+|(Descrição)|(Data)| (Integrantes)|
+|(Descrição)|(Data)| (Integrantes)|
+|(Descrição)|(Data)| (Integrantes)|
+
