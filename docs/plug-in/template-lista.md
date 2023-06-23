@@ -14,4 +14,4 @@ A tabela seguirá com os campos plug-in, que recebe o seu nome, seguida da sua U
 
 | Versão | Data | Descrição| Autor(es)| 
 |--|--|--|--|
-| `1.0` |21/06/2023|Instrospecção| João Pedro | 
+| `1.0` |21/06/2023|Criação do documento| João Pedro | 
