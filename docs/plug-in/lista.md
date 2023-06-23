@@ -11,5 +11,6 @@ A tabela segue a estrutura abaixo, sendo plug-in o nome da aplicação. Link, o 
 |  Open TTS  | [github](https://github.com/synesthesiam/opentts) |  recusado   | Não tem em PT-BR |
 |  marytts   |   [github](https://github.com/marytts/marytts)    |    vago     |    é em Java     |
 | Mozila TTS |     [github](https://github.com/mozilla/TTS)      | trabalhando |    João Pedro    |
+| Read Aloud | [github]((https://github.com/ken107/read-aloud))  | Trabalhando |     Gabriel      |
 
 
