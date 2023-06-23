@@ -6,15 +6,10 @@ A tabela segue a estrutura abaixo, sendo plug-in o nome da aplicação. Link, o 
 
 ## Tabela
 
-| plug-in  |                       link                        |   Status    | Observação |
-| :------: | :-----------------------------------------------: | :---------: | :--------: |
-| Open TTS | [github](https://github.com/synesthesiam/opentts) | Trabalhando | João Pedro |
-| marytts  |   [github](https://github.com/marytts/marytts)    |    vago     | é em Java  |
+|  plug-in   |                       link                        |   Status    |    Observação    |
+| :--------: | :-----------------------------------------------: | :---------: | :--------------: |
+|  Open TTS  | [github](https://github.com/synesthesiam/opentts) |  recusado   | Não tem em PT-BR |
+|  marytts   |   [github](https://github.com/marytts/marytts)    |    vago     |    é em Java     |
+| Mozila TTS |     [github](https://github.com/mozilla/TTS)      | trabalhando |    João Pedro    |
 
-## Versionamento
-
-| Versão | Data       | Descrição            | Autor(es)  |
-| ------ | ---------- | -------------------- | ---------- |
-| `1.0`  | 21/06/2023 | Criação do documento | João Pedro |
-| `1.1`  | 23/06/2023 | Atualização          | João Pedro |
 
