@@ -12,5 +12,5 @@ A tabela segue a estrutura abaixo, sendo plug-in o nome da aplicação. Link, o 
 |  marytts   |   [github](https://github.com/marytts/marytts)    |    vago     |    é em Java     |
 | Mozila TTS |     [github](https://github.com/mozilla/TTS)      | trabalhando |    João Pedro    |
 | Read Aloud | [github]((https://github.com/ken107/read-aloud))  | Trabalhando |     Gabriel      |
-
+| Talkie     | [github](https://github.com/joelpurra/talkie)     | Razoável    |     Funciona, mas a voz é robótica     |
 
