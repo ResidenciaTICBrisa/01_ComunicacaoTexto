@@ -13,4 +13,5 @@ A tabela segue a estrutura abaixo, sendo plug-in o nome da aplicação. Link, o 
 | Mozila TTS |     [github](https://github.com/mozilla/TTS)      | trabalhando |           João Pedro           |
 | Read Aloud | [github](https://github.com/ken107/read-aloud)    |  Razoável   | Atende aos requisitos de baixa, média (parcialmente) e alta (parcialmente) prioridade             |
 |   Talkie   |   [github](https://github.com/joelpurra/talkie)   |  Razoável   | Funciona, mas a voz é robótica |
+| Announcify | [web store](https://chrome.google.com/webstore/detail/announcify/mmiolkcfamcbpoandjpnefiegkcpeoan/related) | recusado | demanda muito tempo para carregar, nem sempre funciona e os links para documentação estão quebrados |
 
