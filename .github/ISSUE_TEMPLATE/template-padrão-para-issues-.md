@@ -1,7 +1,7 @@
 ---
 name: 'Template-padrão-para-issues '
 about: template básico das issues
-title: "#[numero da issue] texto"
+title: texto
 labels: ''
 assignees: ''
 
@@ -13,7 +13,3 @@ assignees: ''
 - [ ] tarefa1
 - [ ] tarefa2
 ## Critérios de aceitação
-
-## Informações adicionais
-- Autor(es):
-- Revisor(es):
