@@ -6,12 +6,12 @@ A tabela seguirá com os campos plug-in, que recebe o seu nome, seguida da sua U
 
 ## Tabela
 
-| plug-in | link | Status | Observação |
-| :----------: | :------------------------------: |  :----------: | :---------------------: |
-|       |           |            |                |
+| plug-in | link  | Status | Observação |
+| :-----: | :---: | :----: | :--------: |
+|         |       |        |            |
 
 ## Versionamento
 
-| Versão | Data | Descrição| Autor(es)| 
-|--|--|--|--|
-| `1.0` |21/06/2023|Instrospecção| João Pedro | 
+| Versão | Data       | Descrição            | Autor(es)  |
+| ------ | ---------- | -------------------- | ---------- |
+| `1.0`  | 21/06/2023 | Criação do documento | João Pedro |
