@@ -35,3 +35,12 @@
 | Data de realização | Hardware Utilizado | Tempo de Resposta | Tamanho do Pacote utilizado | Consumo de dados médio |Navegador Utilizado | Observações |
 |:------------------:|:------------------:|:-----------------:|:---------------------------:|:----------------------:|:------------------:|:------------------:|
 | 17/07/2023 | Notebook/Linux | 0.1s | Roda offline | Roda offline | roda em linha de código ou em uma interface própria | Voz pt-br não é localizada (parece português de portugal e robotizada) |
+
+## Teste (ResponsiveVoice)
+
+## Desempenho utilizando banda larga (Upload: 0,5 MB/s, Download: 1 MB/s)
+| Data de realização | Hardware Utilizado | Tempo de Resposta | Tamanho do Pacote utilizado | Consumo de dados médio |Navegador Utilizado | Observações |
+|:------------------:|:------------------:|:-----------------:|:---------------------------:|:----------------------:|:------------------:|:------------------:|
+| 17/07/2023 | Notebook/Linux | 0.5s | 5.56 MB | 44.5 Kbit/s | Google Chrome | |
+| 17/07/2023 | Notebook/Linux | 0.5s | 5.37 MB | 43.0 Kbit/s | Mozilla | |
+| 17/07/2023 | Notebook/Linux | 0.5s | 21.00 MB | 168.00 Kbit/s | Edge | |
