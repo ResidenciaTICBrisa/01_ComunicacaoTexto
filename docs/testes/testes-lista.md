@@ -29,3 +29,9 @@
 | 03/07/2023 | Notebook / Linux | 0.98 seg para iniciar | 3.75 MB | 30.0 Kbit/s | Google Chrome | |
 | 03/07/2023 | Notebook / Linux | 1.00 seg para iniciar | 3.85 MB | 31.0 Kbit/s | Mozilla | Para utilizar o talkie no mozilla de fábrica é necessário instalar vozes no sistema |
 | 03/07/2023 | - | - | - | - | Edge | O navegador não possui acesso a esta extensão |
+
+# Teste (eSpeak)
+
+| Data de realização | Hardware Utilizado | Tempo de Resposta | Tamanho do Pacote utilizado | Consumo de dados médio |Navegador Utilizado | Observações |
+|:------------------:|:------------------:|:-----------------:|:---------------------------:|:----------------------:|:------------------:|:------------------:|
+| 17/07/2023 | Notebook/Linux | 0.1s | Roda offline | Roda offline | roda em linha de código ou em uma interface própria | Voz pt-br não é localizada (parece português de portugal e robotizada) |
