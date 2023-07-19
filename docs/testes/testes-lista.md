@@ -29,3 +29,23 @@
 | 03/07/2023 | Notebook / Linux | 0.98 seg para iniciar | 3.75 MB | 30.0 Kbit/s | Google Chrome | |
 | 03/07/2023 | Notebook / Linux | 1.00 seg para iniciar | 3.85 MB | 31.0 Kbit/s | Mozilla | Para utilizar o talkie no mozilla de fábrica é necessário instalar vozes no sistema |
 | 03/07/2023 | - | - | - | - | Edge | O navegador não possui acesso a esta extensão |
+
+# Teste (eSpeak)
+
+| Data de realização | Hardware Utilizado | Tempo de Resposta | Tamanho do Pacote utilizado | Consumo de dados médio |Navegador Utilizado | Observações |
+|:------------------:|:------------------:|:-----------------:|:---------------------------:|:----------------------:|:------------------:|:------------------:|
+| 17/07/2023 | Notebook/Linux | 0.1s | Roda offline | Roda offline | roda em linha de código ou em uma interface própria | Voz pt-br não é localizada (parece português de portugal e robotizada) |
+
+## Teste (ResponsiveVoice)
+
+## Desempenho utilizando banda larga (Upload: 0,5 MB/s, Download: 1 MB/s)
+| Data de realização | Hardware Utilizado | Tempo de Resposta | Tamanho do Pacote utilizado | Consumo de dados médio |Navegador Utilizado | Observações |
+|:------------------:|:------------------:|:-----------------:|:---------------------------:|:----------------------:|:------------------:|:------------------:|
+| 17/07/2023 | Notebook/Linux | 0.5s | 5.56 MB | 44.5 Kbit/s | Google Chrome | |
+| 17/07/2023 | Notebook/Linux | 0.5s | 5.37 MB | 43.0 Kbit/s | Mozilla | |
+| 17/07/2023 | Notebook/Linux | 0.5s | 21.00 MB | 168.00 Kbit/s | Edge | |
+
+# Teste (Mozilla TTS)
+| Data de realização | Hardware Utilizado | Tempo de Resposta | Tamanho do Pacote utilizado | Consumo de dados médio |Navegador Utilizado | Observações |
+|:------------------:|:------------------:|:-----------------:|:---------------------------:|:----------------------:|:------------------:|:------------------:|
+| 12/07/2023 | Notebook/Linux | 0.3s | Roda offline | Roda offline | Roda em linha de código | Voz com sotaque muito carregado |
