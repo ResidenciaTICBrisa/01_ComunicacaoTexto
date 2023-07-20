@@ -18,7 +18,7 @@
 
 * Ajuste de prazos
 * Acompanhamento dos testes
-* Acompanghamento da configuração do ambiente DECIDIM
+* Acompanhamento da configuração do ambiente DECIDIM
 
 ## Atividades Definidas
 
