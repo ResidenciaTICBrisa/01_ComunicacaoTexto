@@ -1,4 +1,4 @@
-# Ata da Reunião 06 - 26/07
+# Ata da Reunião 07 - 02/08
 
 ## Lista de presença
 
@@ -12,17 +12,17 @@
 
 | Horário de Início | Horário de Término | Local |
 |:-----------------:|:------------------:|:-----:|
-| 14:00 | 14:30 | Container Lappis |
+| 15:00 | 15:30 | Local Remoto |
 
 ## Pautas
 
-* Planejamento da apresentação para a equipe do DECIDIM
-* Alinhamento da equipe em relação ao uso da plataforma
-* Aperfeiçoamento do uso da tecnologia TTS (atalhos para pessoas com deficiência visual)
+* Documentação do projeto (roadmap e wiki)
+* Integração do plugin TTS com os outros plugins do decidim
+* Definição dos papeis da equipe
 
 ## Atividades Definidas
 
 |                                       Atividade                                        | Prazo |                  Responsável                   |
 | :-------------------------: | :------------------------------------------------------: | :----------------------: |
-| Estruturar apresentação | 27/07 | Todos os integrantes |
-| Estilizar o plug-in no DECIDIM | 28/07 | Todos os integrantes |
+| Aperfeiçoar a documentação do projeto | 09/08 | Gabriel Barbosa, João Pedro e Izabella Alves |
+| Trabalhar na integração do TTS com os outros plugins do decidim | 09/08 | Geovane Freitas e Vitor Borges |
