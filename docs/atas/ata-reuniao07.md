@@ -24,5 +24,5 @@
 
 |                                       Atividade                                        | Prazo |                  Responsável                   |
 | :-------------------------: | :------------------------------------------------------: | :----------------------: |
-| Aperfeiçoar a documentação do projeto | 09/08 | Gabriel Barbosa, João Pedro e Izabella Alves |
-| Trabalhar na integração do TTS com os outros plugins do decidim | 09/08 | Geovane Freitas e Vitor Borges |
+| Aperfeiçoar a documentação do projeto | 09/08 | Gabriel Barbosa, João Pedro, Izabella Alves |
+| Trabalhar na integração do TTS com os outros plugins do decidim | 09/08 | Geovane Freitas, Vitor Borges |
