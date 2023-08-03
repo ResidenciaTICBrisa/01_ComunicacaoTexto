@@ -52,6 +52,17 @@ https://docs.docker.com/compose/install/linux/
 
 (Antes do download do docker compose, use o comando que checa a versão, as vezes ele ja esta instalado)
 
+## Criando documento .env
+
+Após as últimas atualizações a .env foi alterada e necessita de mais chaves para funcionar, desta forma para conseguir rodar o ambiente é necessário adicionar as chaves REDIS_URL e REDIS_CACHE_URL. O documento completo a ser criado deve conter as seguintes chaves:
+
+```
+ALLOW_HOSTS=/.*/
+DATABASE_USERNAME=postgres
+DATABASE_PASSWORD=postgres
+REDIS_URL=redis://redis-queue:6379/1
+REDIS_CACHE_URL=redis://redis-queue:6380
+```
 
 ## Instalando as dependências
 
