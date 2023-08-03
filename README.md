@@ -7,10 +7,13 @@ Em plataformas de participação digital, é muito importante permitir que toda 
 
 
 **Equipe:** 
-- @VitorB2002 - Líder Técnico
-- @bot-do-jao - Scrum Master
-- @izabellaalves - Product Manager
-- @gabrie1barbosa - Equipe técnica
-- @BlimblimCFT - Equipe técnica
+| Nome            | Papel            |
+|--------------------|------------------|
+| Vitor Borges      | Líder Técnico    |
+| João Nóbrega       | Scrum Master     |
+| Izabella Alves    | Product Manager  |
+| Gabriel Barbosa   | Equipe técnica   |
+| Geovane Freitas     | Equipe técnica   |
+
 
 **Mentores:** Laila Felix, Secretaria de Participação Social
