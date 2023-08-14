@@ -107,3 +107,9 @@ Ao clicar no ícone é possível realizar a leitura da página utilizando as mes
 <audio id="ra-audio" data-lang="pt-BR" data-voice="free" data-key="dda900319d5b19d3f7ec703ca1338196"></audio>
 ```
 <h6 align = "center"> Snippet de integração</h6>
+
+### Como usar?
+
+<p align = "justify">
+Para utilizar qualquer um dos dois snippets basta copiar o trecho do respectivo snippet desejado e colar em qualquer página html dentro da tag "body".
+</p>
