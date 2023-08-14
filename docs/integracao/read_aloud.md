@@ -29,6 +29,10 @@ O snippet é bem semelhante ao anterior em relação as funcionalidades, porém 
 Ao clicar no ícone é possível realizar a leitura da página utilizando as mesmas ferramentas, ao clicar novamente no ícone o display de leitura some.
 </p>
 
+[snippet_integracao.webm](https://github.com/ResidenciaTICBrisa/01_ComunicacaoTexto/assets/78763082/c8a20513-0de6-4503-a992-db9fae6516f3)
+
+<h6 align = "center"> Interface do snippet integrado a uma página web</h6>
+
 ```
 <div vw class="enabled">
     <div vw-access-button class="active"></div>
