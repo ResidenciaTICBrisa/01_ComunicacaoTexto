@@ -9,3 +9,8 @@
 
 - [Intro e exercícios - w3schools](https://www.w3schools.com/js/js_htmldom.asp)
 - [Documentação prática - mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model)
+
+## DevTools (debbug, visão mobile e desktop)
+
+- [O que são as devtools](https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
+- [Debbug em Javascript](https://developer.chrome.com/docs/devtools/javascript/#reproduce)
