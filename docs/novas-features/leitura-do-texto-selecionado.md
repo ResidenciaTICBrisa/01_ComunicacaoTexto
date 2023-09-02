@@ -3,6 +3,9 @@ Uma das funcionalidades importantes pro funcionamento e distribuição do nosso 
 
 Essa funcionalidade foi realizada através da modificação da função **readAloud**, a função principal do nosso snippet, e da função **readAloudInit**, que está localizada no script externo da aplicação.
 
+### Funcionamento
+O usuário deve selecionar o texto que ele quer que seja lido antes de clicar no botão com o ícone do snippet, e aí ouvirá somente o conteúdo selecionado. Caso nada seja selecionado, o snippet lerá a página completa.
+
 O código do snippet com a adição da feature de leitura do texto selecionado está da seguinte forma:
 
 ### Código principal do snippet com a feature de leitura do texto selecionado
