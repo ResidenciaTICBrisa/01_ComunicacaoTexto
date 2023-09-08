@@ -1,0 +1,38 @@
+site_name: Documentação - Comunicação para Além do Texto
+repo_name: 01_ComunicacaoTexto
+repo_url: https://github.com/ResidenciaTICBrisa/01_ComunicacaoTexto
+nav:
+  - Home: index.md
+  - Materiais de estudo: estudos/materiais-de-estudos.md
+  - Atas de reunião:
+    - Reunião 00: atas/ata-reuniao00.md
+    - Reunião 01: atas/ata-reuniao01.md
+    - Reunião 02: atas/ata-reuniao02.md
+    - Reunião 03: atas/ata-reuniao03.md
+    - Reunião 04: atas/ata-reuniao04.md
+    - Reunião 05: atas/ata-reuniao05.md
+    - Reunião 06: atas/ata-reuniao06.md
+    - Reunião 07: atas/ata-reuniao07.md
+    - Reunião 08: atas/ata-reuniao08.md
+    - Reunião 09: atas/ata-reuniao09.md
+    - Reunião 10: atas/ata-reuniao10.md
+    - Reunião 11: atas/ata-reuniao11.md
+  - Requisitos: requisitos/requisitos-plug.md
+  - Plugins: plug-in/lista.md
+  - Teste dos plugins:
+    - Roteiro de testes: testes/roteiro-testes.md
+    - Testes: testes/testes-lista.md
+  - Configuração de ambiente: estudos/tutorial-ambiente-decidim.md
+  - Novas features:
+    - Leitura do texto selecionado: novas-features/leitura-do-texto-selecionado.md
+    - Marcação dos parágrafos: novas-features/marcacao-dos-paragrafos.md
+    - Integração das features: novas-features/integracao-features.md
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
