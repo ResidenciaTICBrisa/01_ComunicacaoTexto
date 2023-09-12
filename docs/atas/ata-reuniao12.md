@@ -5,24 +5,24 @@
 | Nome | Presente |
 |:----:|:--------:|
 | Gabriel Barbosa | Sim |
-| Geovane Freitas | Não |
+| Geovane Freitas | Sim |
 | João Pedro | Sim |
 | Izabella Alves | Sim |
 | Vitor Borges | Sim |
 
 | Horário de Início | Horário de Término | Local |
 |:-----------------:|:------------------:|:-----:|
-| 13:00 | 13:30 | Container Lappis |
+| 13:00 | 13:40 | Container Lappis |
 
 ## Pautas
 
-* Próximos passos (escopo, features, estado atual)
-* Deploy de scripts (js e css)
+* Feature de leitura palavra por palavra
+* Preparação para Deploy
+* Feature de explicação do plugin
 
 ## Atividades Definidas
 
 |                                   Atividade                                        | Prazo |                  Responsável                   |
 | :-------------------------: | :------------------------------------------------------: | :----------------------: |
-| Feature ler texto que foi selecionado | 05/09 | Izabella Alves|
-| Feature marcar parágrafos enquanto são lidos | 05/09 | Vitor Borges |
-| Realizar deploy do script e da folha de estilo | 05/09 | João Pedro, Geovanne Freitas e Gabriel Barbosa |
+| Feature palavra por palavra | 19/09 | Geovane Freitas, Vitor Borges |
+| Preparação para Deploy | 19/09 | Gabriel Barbosa, João Pedro, Izabella Alves |
