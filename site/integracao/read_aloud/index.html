@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../../testes/testes-lista/">
-      
-      
-        <link rel="next" href="../../novas-features/palavra-por-palavra/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Configuração de ambiente - Documentação - Comunicação para Além do Texto</title>
+        <title>Read aloud - Documentação - Comunicação para Além do Texto</title>
       
     
     
@@ -75,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#disclaimer" class="md-skip">
+        <a href="#integracao-do-read-aloud-tts" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuração de ambiente
+              Read aloud
             
           </span>
         </div>
@@ -255,7 +251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../materiais-de-estudos/" class="md-nav__link">
+      <a href="../../estudos/materiais-de-estudos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -712,18 +708,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../estudos/tutorial-ambiente-decidim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +719,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -875,8 +861,48 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#integracao-do-read-aloud-tts" class="md-nav__link">
+    Integração do Read Aloud TTS
+  </a>
+  
+    <nav class="md-nav" aria-label="Integração do Read Aloud TTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snippet-padrao" class="md-nav__link">
+    Snippet padrão
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snippet-de-integracao" class="md-nav__link">
+    Snippet de integração
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-usar" class="md-nav__link">
+    Como usar?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -894,50 +920,120 @@
   
 
 
-<h1 id="disclaimer">Disclaimer</h1>
-<p>Esse tutorial encontra-se também no nosso repositório do <a href="https://gitlab.com/bot-do-jao/decidim-brisa/">gitlab</a> que é o principal ambiente de desenvolvimento. Esse repositório por vezes será usado com foco na documentação do processo.</p>
-<h1 id="tutorial-configuracao-do-ambiente">Tutorial configuração do ambiente</h1>
-<p>O tutorial oferecido pela wiki do repositório é muito bom, mas eu identifiquei algumas etapas que merecem comentários adicionais. Por isso, comentarei seção a seção do que eu achei relevante.</p>
-<h2 id="versoes">Versões</h2>
-<p>Essa parte aqui segundo a própria documentação diz que a versão importa. Entretanto, a principal delas é a versão do ruby, que no próprio tutorial ja instala a versão correta.
-Obs: a versão de vários pacotes que vcs baixarem no terminal pode e provavelmente vai estar errada (como o node, que no ubuntu a versão empacotada é as 12.xx.xx, bem abaixo do pedido) então verifiquem o que ja tem baixado e atualizem depois.</p>
-<ul>
-<li>Git - versão 2.34 ou superior</li>
-<li>Ruby - versão 3.0.4</li>
-<li>NodeJS - versão 16.18.x</li>
-<li>NPM - versão 8.19.x</li>
-<li>Docker</li>
-<li>Docker Compose</li>
-</ul>
-<h2 id="ruby">Ruby</h2>
-<p>Aqui o tutorial deles é perfeito, vou finalmente colocar o link e podem seguir da instalação do rbenv até finalizar ruby</p>
-<p>https://gitlab.com/lappis-unb/decidimbr/decidim-govbr/-/wikis/On-board-decidim-govbr#configurando-ambiente</p>
-<h2 id="node">Node</h2>
-<p>Aqui o tutorial apenas não funcionou para mim. Peço que desconsiderem ele e usem a do proprio ubuntu empacotada junto do seguinte comando</p>
-<pre><code class="language-bash">sudo npm cache clean -f
-sudo npm install -g n
-sudo n stable
+  <h1>Read aloud</h1>
+
+<h2 id="integracao-do-read-aloud-tts">Integração do Read Aloud TTS</h2>
+<h3 id="snippet-padrao">Snippet padrão</h3>
+<p align="justify">
+O snippet padrão cria um componente no cabeçalho da página e a partir do mesmo é possível realizar a leitura do texto da página. Com o snippet padrão também é possível selecionar qual paragrafo será lido, a velocidade de leitura, realizar pausas, selecionar vozes (as vozes disponíveis são as que o usuário possui instaladas em seu navegador) e recomeçar a leitura da página.
+</p>
+
+<pre><code>&lt;style&gt;.ra-button {padding: .3em .9em; border-radius: .25em; background: linear-gradient(#fff, #efefef); box-shadow: 0 1px .2em gray; display: inline-flex; align-items: center; cursor: pointer;} .ra-button img {height: 1em; margin: 0 .5em 0 0;}
+&lt;/style&gt;
+
+&lt;div id=&quot;ra-player&quot; data-skin=&quot;https://assets.readaloudwidget.com/embed/skins/default&quot;&gt;&lt;div class=&quot;ra-button&quot; onclick=&quot;readAloud(document.getElementById('ra-audio'), document.getElementById('ra-player'))&quot;&gt;&lt;img src=&quot;https://assets.readaloudwidget.com/embed/skins/default/play-icon.png&quot;/&gt; Listen to this article&lt;/div&gt;&lt;/div&gt;
+
+&lt;audio id=&quot;ra-audio&quot; data-lang=&quot;pt-BR&quot; data-voice=&quot;free&quot; data-key=&quot;dda900319d5b19d3f7ec703ca1338196&quot;&gt;&lt;/audio&gt;
+
+&lt;script&gt;function readAloud(e,t){var n=&quot;https://assets.readaloudwidget.com/embed/&quot;,s=(/iPad|iPhone|iPod/.test(navigator.userAgent)&amp;&amp;(e.src=n+&quot;sound/silence.mp3&quot;,e.play(),&quot;undefined&quot;!=typeof speechSynthesis&amp;&amp;speechSynthesis.speak(new SpeechSynthesisUtterance(&quot; &quot;))),document.createElement(&quot;script&quot;));s.onload=function(){readAloudInit(e,t)},s.src=n+&quot;js/readaloud.min.js&quot;,document.head.appendChild(s),fetch(&quot;https://staging-service.diepkhuc.com/%23referer-log&quot;,{method:&quot;POST&quot;,body:location.href})}&lt;/script&gt;
 </code></pre>
-<p>Obs: tenha o npm instalado antes de usar esse comando</p>
-<h2 id="docker-e-docker-compose">Docker e Docker Compose</h2>
-<p>Para docker, eu segui o tutorial oficial que instala o docker engine. Seguindo o seguinte link. </p>
-<p>https://docs.docker.com/engine/install/ubuntu/#set-up-the-repository</p>
-<p>Depois, siga esses passos para a pós instalação</p>
-<p>https://docs.docker.com/engine/install/linux-postinstall/</p>
-<p>e por fim, para o docker compose</p>
-<p>https://docs.docker.com/compose/install/linux/</p>
-<p>(Antes do download do docker compose, use o comando que checa a versão, as vezes ele ja esta instalado)</p>
-<h2 id="criando-documento-env">Criando documento .env</h2>
-<p>Após as últimas atualizações a .env foi alterada e necessita de mais chaves para funcionar, desta forma para conseguir rodar o ambiente é necessário adicionar as chaves REDIS_URL e REDIS_CACHE_URL. O documento completo a ser criado deve conter as seguintes chaves:</p>
-<pre><code>ALLOW_HOSTS=/.*/
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=postgres
-REDIS_URL=redis://redis-queue:6379/1
-REDIS_CACHE_URL=redis://redis-queue:6380
+<h6 align = "center"> Snippet padrão Read Aloud</h6>
+
+<p align="justify">
+Obs: Para poupar o uso de dados este snippet está configurado para utilizar vozes que já estejam presentes no navegador do usuário.
+</p>
+
+<h3 id="snippet-de-integracao">Snippet de integração</h3>
+<p align="justify">
+O snippet é bem semelhante ao anterior em relação as funcionalidades, porém o mesmo apresenta grandes mudanças em sua estilização. O mesmo após ser integrado no código agora será encontrado no canto direito da página em uma posição fixa (conforme a página se move o ícone acompanha).<br>
+Ao clicar no ícone é possível realizar a leitura da página utilizando as mesmas ferramentas, ao clicar novamente no ícone o display de leitura some.
+</p>
+
+<p><a href="https://github.com/ResidenciaTICBrisa/01_ComunicacaoTexto/assets/78763082/c8a20513-0de6-4503-a992-db9fae6516f3">snippet_integracao.webm</a></p>
+<h6 align = "center"> Interface do snippet integrado a uma página web</h6>
+
+<pre><code>&lt;div vw class=&quot;enabled&quot;&gt;
+    &lt;div vw-access-button class=&quot;active&quot;&gt;&lt;/div&gt;
+    &lt;div vw-plugin-wrapper&gt;
+      &lt;div class=&quot;vw-plugin-top-wrapper&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;function readAloud(e,t){var n=&quot;https://assets.readaloudwidget.com/embed/&quot;,s=(/iPad|iPhone|iPod/.test(navigator.userAgent)&amp;&amp;(e.src=n+&quot;sound/silence.mp3&quot;,e.play(),&quot;undefined&quot;!=typeof speechSynthesis&amp;&amp;speechSynthesis.speak(new SpeechSynthesisUtterance(&quot; &quot;))),document.createElement(&quot;script&quot;));s.onload=function(){readAloudInit(e,t)},s.src=n+&quot;js/readaloud.min.js&quot;,document.head.appendChild(s),fetch(&quot;https://staging-service.diepkhuc.com/%23referer-log&quot;,{method:&quot;POST&quot;,body:location.href})}&lt;/script&gt;
+
+&lt;script&gt;
+    const ttsContainer = document.createElement(&quot;div&quot;)
+    const ttsButton = document.createElement(&quot;div&quot;)
+    ttsContainer.id = &quot;tts-container&quot;
+    ttsButton.setAttribute(&quot;ttsOn&quot;, &quot;false&quot;)
+    ttsButton.id = &quot;tts-button&quot;
+    const ttsButtonIcon = document.createElement(&quot;img&quot;)
+    ttsButtonIcon.id = &quot;tts-button-icon&quot;
+    ttsButtonIcon.src = &quot;https://cdn.pixabay.com/photo/2017/04/11/22/25/megaphone-2223049_1280.png&quot;
+    ttsButton.append(ttsButtonIcon)
+    ttsContainer.append(ttsButton)
+    document.body.appendChild(ttsContainer)
+&lt;/script&gt;
+
+&lt;script&gt;
+    function handleTTS() {
+        if(ttsButton.getAttribute(&quot;ttson&quot;) == &quot;true&quot;){
+            const ttsPlayer = document.getElementById(&quot;ra-player&quot;)
+            ttsContainer.removeChild(ttsPlayer)
+            ttsButton.setAttribute(&quot;ttson&quot;, &quot;false&quot;)
+        }   else{
+            const raPlayer = document.createElement(&quot;div&quot;)
+            const raButton = document.createElement(&quot;div&quot;)
+            const playIcon = document.createElement(&quot;img&quot;)
+
+            raPlayer.id = &quot;ra-player&quot;
+            raPlayer.setAttribute(&quot;data-skin&quot;, &quot;https://assets.readaloudwidget.com/embed/skins/default&quot;)
+            raButton.classList.add(&quot;ra-button&quot;)
+            raButton.addEventListener(&quot;click&quot;, function(){readAloud(document.getElementById('ra-audio'), document.getElementById('ra-player'))})
+            playIcon.src = &quot;https://assets.readaloudwidget.com/embed/skins/default/play-icon.png&quot;
+            raButton.append(playIcon)
+            raButton.append(&quot;texto para fala&quot;)
+            raPlayer.append(raButton)
+            ttsContainer.append(raPlayer)
+            ttsButton.setAttribute(&quot;ttson&quot;, &quot;true&quot;)
+        }
+    }
+
+    document.getElementById(&quot;tts-button&quot;).onclick = handleTTS
+&lt;/script&gt;
+
+&lt;style&gt;
+    .ra-button {padding: .3em .9em; border-radius: .25em; background: linear-gradient(#fff, #efefef); box-shadow: 0 1px .2em gray; display: inline-flex; align-items: center; cursor: pointer;} 
+    .ra-button img {height: 1em; margin: 0 .5em 0 0;}
+    #tts-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        position: fixed;
+        max-width: 95vw;
+        right: 0;
+        top: 42%;
+        transform: translateY(-50%);
+        z-index: 99999999;
+        margin: 10px !important;
+    }
+    #tts-button-icon {
+        display: flex;
+        width: 40px;
+        height: auto;
+    }
+&lt;/style&gt;
+
+&lt;audio id=&quot;ra-audio&quot; data-lang=&quot;pt-BR&quot; data-voice=&quot;free&quot; data-key=&quot;dda900319d5b19d3f7ec703ca1338196&quot;&gt;&lt;/audio&gt;
 </code></pre>
-<h2 id="instalando-as-dependencias">Instalando as dependências</h2>
-<p>Após a parte de docker, ja entramos na configuração de ambiente, felizmente essa parte não tem nenhum comentario relevante, nem link externo, basta voltar para o <a href="https://gitlab.com/lappis-unb/decidimbr/decidim-govbr/-/wikis/On-board-decidim-govbr#configurando-ambiente">link</a> do decidim e seguir da parte que começa a falar em PostgressSQL.</p>
-<p>Único adendo é fazer a parte das dependências dentro do fork do nosso repositório, que não deve ser um problema já que esse documento está dentro dele.</p>
+<h6 align = "center"> Snippet de integração</h6>
+
+<h3 id="como-usar">Como usar?</h3>
+<p align = "justify">
+Para utilizar qualquer um dos dois snippets basta copiar o trecho do respectivo snippet desejado e colar em qualquer página html dentro da tag "body".
+</p>
 
 
 

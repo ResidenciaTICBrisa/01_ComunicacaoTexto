@@ -1,6 +1,7 @@
 site_name: Documentação - Comunicação para Além do Texto
 repo_name: 01_ComunicacaoTexto
 repo_url: https://github.com/ResidenciaTICBrisa/01_ComunicacaoTexto
+
 nav:
   - Home: index.md
   - Materiais de estudo: estudos/materiais-de-estudos.md
@@ -17,6 +18,8 @@ nav:
     - Reunião 09: atas/ata-reuniao09.md
     - Reunião 10: atas/ata-reuniao10.md
     - Reunião 11: atas/ata-reuniao11.md
+    - Reunião 12: atas/ata-reuniao12.md
+    - Reunião 13: atas/ata-reuniao13.md
   - Requisitos: requisitos/requisitos-plug.md
   - Plugins: plug-in/lista.md
   - Teste dos plugins:
@@ -24,6 +27,7 @@ nav:
     - Testes: testes/testes-lista.md
   - Configuração de ambiente: estudos/tutorial-ambiente-decidim.md
   - Novas features:
+    - Marcação de palavra por palavra: novas-features/palavra-por-palavra.md
     - Leitura do texto selecionado: novas-features/leitura-do-texto-selecionado.md
     - Marcação dos parágrafos: novas-features/marcacao-dos-paragrafos.md
     - Integração das features: novas-features/integracao-features.md
