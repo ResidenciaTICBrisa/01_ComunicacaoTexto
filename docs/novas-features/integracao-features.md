@@ -11,12 +11,12 @@ Após alterar o código para possibilitar as novas features alguns trechos entra
     </div>
 </div>
 
-<p class="la">lalalalalalalala</p>
-<p class="ok">ok ok ok ok ok </p>
+<button id="tts-question" onclick="ttsQuestion()">?</button>
 
-<script>function readAloud(e,t){s=(/iPad|iPhone|iPod/.test(navigator.userAgent)&&(e.src=n+"sound/silence.mp3",e.play(),"undefined"!=typeof speechSynthesis&&speechSynthesis.speak(new SpeechSynthesisUtterance(" "))),document.createElement("script"));s.onload=function(){readAloudInit(e,t,null)},s.src="readaloud.min.js",document.head.appendChild(s),fetch("https://staging-service.diepkhuc.com/%23referer-log",{method:"POST",body:location.href})}</script>
+<script>function readAloud(e,t,texto){console.log(texto);s=(/iPad|iPhone|iPod/.test(navigator.userAgent)&&(e.src=n+"sound/silence.mp3",e.play(),"undefined"!=typeof speechSynthesis&&speechSynthesis.speak(new SpeechSynthesisUtterance(" "))),document.createElement("script"));s.onload=function(){readAloudInit(e,t,null, texto)},s.src="readaloud.js",document.head.appendChild(s),fetch("https://staging-service.diepkhuc.com/%23referer-log",{method:"POST",body:location.href})}</script>
 
 <script>
+    const question = document.getElementById("tts-question")
     const ttsContainer = document.createElement("div")
     const ttsButton = document.createElement("div")
     ttsContainer.id = "tts-container"
@@ -27,11 +27,13 @@ Após alterar o código para possibilitar as novas features alguns trechos entra
     ttsButtonIcon.src = "https://cdn.pixabay.com/photo/2017/04/11/22/25/megaphone-2223049_1280.png"
     ttsButton.append(ttsButtonIcon)
     ttsContainer.append(ttsButton)
+    ttsContainer.append(question)
     document.body.appendChild(ttsContainer)
 </script>
-        
+
 <script>
     function handleTTS() {
+        var texto;
         if (ttsButton.getAttribute("ttson") == "true") {
             const ttsPlayer = document.getElementById("ra-player");
             ttsContainer.removeChild(ttsPlayer);
@@ -44,6 +46,13 @@ Após alterar o código para possibilitar as novas features alguns trechos entra
             raPlayer.id = "ra-player";
             raPlayer.setAttribute("data-skin", "https://assets.readaloudwidget.com/embed/skins/default");
             raButton.classList.add("ra-button");
+            raButton.addEventListener("click", function() {
+                var selection = window.getSelection();
+                var selectedText = selection.toString().trim();
+                texto = selectedText;
+                console.log("Texto selecionado:", texto);
+                readAloud(document.getElementById('ra-audio'), document.getElementById('ra-player'), texto);
+            });
             playIcon.src = "https://assets.readaloudwidget.com/embed/skins/default/play-icon.png";
             raButton.append(playIcon);
             raButton.append("texto para fala");
@@ -53,36 +62,71 @@ Após alterar o código para possibilitar as novas features alguns trechos entra
         }
     }
     document.getElementById("tts-button").onclick = handleTTS;
-</script>
 
-</script>
-
-<style>
-    .ra-button {padding: .3em .9em; border-radius: .25em; background: linear-gradient(#fff, #efefef); box-shadow: 0 1px .2em gray; display: inline-flex; align-items: center; cursor: pointer;} 
-    .ra-button img {height: 1em; margin: 0 .5em 0 0;}
-    #tts-container {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        position: fixed;
-        max-width: 95vw;
-        right: 0;
-        top: 42%;
-        transform: translateY(-50%);
-        z-index: 99999999;
-        margin: 10px !important;
+    function ttsQuestion() {
+        readAloud(document.getElementById('ra-audio'), document.getElementById('ra-player'), "Olá, sou Voz Para Todos, uma ferramenta de acessibilidade.");
     }
-    #tts-button-icon {
-        display: flex;
-        width: 40px;
-        height: auto;
-    }
-</style>
-
+</script>
 
 <audio id="ra-audio" data-lang="pt-BR" data-voice="free" data-key="dda900319d5b19d3f7ec703ca1338196"></audio>
+```
+
+# Código estilização
+
+```
+.ra-button {
+    padding: .3em .9em; 
+    border-radius: .25em; 
+    background: linear-gradient(#fff, #efefef); 
+    box-shadow: 0 1px .2em gray; 
+    display: inline-flex; 
+    align-items: center; 
+    cursor: pointer;
+}
+
+.ra-button img {
+    height: 1em; 
+    margin: 0 .5em 0 0;
+}
+
+#tts-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    max-width: 95vw;
+    right: 0;
+    top: 42%;
+    transform: translateY(-50%);
+    z-index: 99999999;
+    margin: 10px !important;
+}
+
+#tts-button-icon {
+    display: flex;
+    width: 40px;
+    height: auto;
+}
+
+#tts-container:hover #tts-question {
+    display: flex;
+}
+
+#tts-question {
+    display: none;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1D8ADA;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
 ```
 
 # Código script externo
@@ -90,6 +134,7 @@ Após alterar o código para possibilitar as novas features alguns trechos entra
 ```
 let readIndex = 0
 let checkRead = false
+let anterior
 
 function desmarca(){
     if(checkRead){
@@ -117,6 +162,31 @@ function marca(){
     }
 
     return
+}
+
+function handleBoundary(event) {
+    if (event.name === 'sentence') {
+      // we only care about word boundaries
+      return;
+    }
+
+    let paragrafo = document.getElementsByClassName("read-aloud")[readIndex-1]
+    let text = event.utterance.text
+  
+    const wordStart = event.charIndex;
+  
+    let wordLength = event.charLength;
+
+    if (wordLength === undefined) {
+      // Safari doesn't provide charLength, so fall back to a regex to find the current word and its length (probably misses some edge cases, but good enough for this demo)
+      const match = text.substring(wordStart).match(/^[a-z\d']*/i);
+      wordLength = match[0].length;
+    }
+    // wrap word in <mark> tag
+    const wordEnd = wordStart + wordLength;
+    const word = text.substring(wordStart, wordEnd);
+    const markedText = text.substring(0, wordStart) + '<b>' + word + '</b>' + text.substring(wordEnd);
+    paragrafo.innerHTML = markedText;
 }
 
 function ReadAloudWebSpeech() {
@@ -149,6 +219,7 @@ function ReadAloudWebSpeech() {
             o.lang = t.lang,
             o.pitch = t.pitch,
             o.rate = t.effectiveRate,
+            o.addEventListener('boundary', handleBoundary),
             o.volume = t.volume;
             e = new Promise(function(e) {
                 o.onstart = e
@@ -158,10 +229,9 @@ function ReadAloudWebSpeech() {
             if(readIndex > 0){
                 desmarca()
             }
-
+            
             marca()
             readIndex++
-
             //debugger
             return o.onend = n,
             o.onerror = function(e) {
