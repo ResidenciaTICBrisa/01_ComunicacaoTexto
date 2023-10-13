@@ -790,7 +790,7 @@ function ReadAloudPlayer(o, t, a, e) {
 }
 function ReadAloudDoc(i) {
     var a = ["H1", "H2", "H3", "H4", "H5", "H6"]
-      , s = ["P", "BLOCKQUOTE", "PRE"]
+      , s = ["P", "BLOCKQUOTE", "PRE", "A","DIV", "FORM", "LABEL"]
       , r = ["OL", "UL"];
     function u(e) {
         i(e).find("sup").hide(),
