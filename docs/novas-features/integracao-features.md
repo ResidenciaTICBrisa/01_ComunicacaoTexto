@@ -134,11 +134,12 @@ Após alterar o código para possibilitar as novas features alguns trechos entra
 ```
 let readIndex = 0
 let checkRead = false
+let ajuda = false
 let anterior
 
 function desmarca(){
-    if(checkRead){
-
+    if(checkRead || ajuda){
+        readIndex = 0
     }   else{
         let paragrafoAnterior = document.getElementsByClassName("read-aloud")[readIndex-1]
         paragrafoAnterior.style.borderRadius = ""
@@ -152,8 +153,8 @@ function desmarca(){
 }
 
 function marca(){
-    if(checkRead){
-
+    if(checkRead || ajuda){
+        readIndex = 0
     }   else{
         let paragrafo = document.getElementsByClassName("read-aloud")[readIndex]
         paragrafo.style.borderRadius = "25px"
@@ -871,13 +872,21 @@ function readAloudInit(o, r,t,  texto) {
         var n;
         return Promise.all([l && l.ready(i), !window.jQuery && h("https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js").then(eval)]).then(function(e) {
             n = e[0];
-            if (texto!=""){
+
+            if(texto == "Olá, sou Voz Para Todos, uma ferramenta de acessibilidade."){
+                ajuda = true
+            }   else{
+                ajuda = false
+            }
+            
+            if (texto != ""){
                 var e = texto;
                 checkRead = true;
-            } else {
+            }else {
                 checkRead = false;
                 var e = "function" == typeof readAloudGetText ? readAloudGetText(jQuery) : new ReadAloudDoc(jQuery).getTexts().join("\n\n");
             }
+
             return Promise.all([n ? e : (e = e,
             function(o, r) {
                 return new Promise(function(e, t) {
