@@ -64,7 +64,7 @@ Após alterar o código para possibilitar as novas features alguns trechos entra
     document.getElementById("tts-button").onclick = handleTTS;
 
     function ttsQuestion() {
-        readAloud(document.getElementById('ra-audio'), document.getElementById('ra-player'), "Olá, sou Voz Para Todos, uma ferramenta de acessibilidade.");
+        readAloud(document.getElementById('ra-audio'), document.getElementById('ra-player'), "Olá, eu sou o Voz para Todos! Sou uma ferramenta que lê para você o conteúdo desta página web e esse é o meu tutorial de uso. Para me utilizar corretamente, basta clicar no botão azul e um alto falante, ele é responsável por me ligar e começar a minha leitura do início até o fim da página. Caso deseje ler apenas um trecho específico, selecione ele com seu mouse e, com o texto selecionado, aperte novamente no meu botão. Enquanto eu leio a página, também marco o trecho que está sendo lido e destaco a palavra atual, para o seu melhor acompanhamento! E pronto! Você agora está pronto para me utilizar em todas as páginas deste site. ");
     }
 </script>
 
