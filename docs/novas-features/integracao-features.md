@@ -145,6 +145,7 @@ function desmarca(){
         paragrafoAnterior.style.borderRadius = ""
         paragrafoAnterior.style.padding = ""
         paragrafoAnterior.style.background = ""
+        paragrafoAnterior.innerHTML = anterior.innerHTML
         if(document.getElementsByClassName("read-aloud").length == readIndex){
             readIndex = 0;
         }
@@ -157,9 +158,11 @@ function marca(){
         readIndex = 0
     }   else{
         let paragrafo = document.getElementsByClassName("read-aloud")[readIndex]
+        anterior = paragrafo.cloneNode(true)
         paragrafo.style.borderRadius = "25px"
         paragrafo.style.padding = "10px"
         paragrafo.style.background = "rgba(29,117,249,0.31415)"
+        debugger
     }
 
     return
@@ -183,7 +186,6 @@ function handleBoundary(event) {
       const match = text.substring(wordStart).match(/^[a-z\d']*/i);
       wordLength = match[0].length;
     }
-    // wrap word in <mark> tag
     const wordEnd = wordStart + wordLength;
     const word = text.substring(wordStart, wordEnd);
     const markedText = text.substring(0, wordStart) + '<b>' + word + '</b>' + text.substring(wordEnd);
@@ -790,7 +792,7 @@ function ReadAloudPlayer(o, t, a, e) {
 }
 function ReadAloudDoc(i) {
     var a = ["H1", "H2", "H3", "H4", "H5", "H6"]
-      , s = ["P", "BLOCKQUOTE", "PRE", "A","DIV", "FORM", "LABEL"]
+      , s = ["P", "BLOCKQUOTE", "PRE"]
       , r = ["OL", "UL"];
     function u(e) {
         i(e).find("sup").hide(),

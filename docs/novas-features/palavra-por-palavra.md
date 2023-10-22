@@ -94,16 +94,18 @@ A modificação necessária foi realizada na função webSpeech, onde foi criado
 ```
 let readIndex = 0
 let checkRead = false
+let ajuda = false
 let anterior
 
 function desmarca(){
-    if(checkRead){
-
+    if(checkRead || ajuda){
+        readIndex = 0
     }   else{
         let paragrafoAnterior = document.getElementsByClassName("read-aloud")[readIndex-1]
         paragrafoAnterior.style.borderRadius = ""
         paragrafoAnterior.style.padding = ""
         paragrafoAnterior.style.background = ""
+        paragrafoAnterior.innerHTML = anterior.innerHTML
         if(document.getElementsByClassName("read-aloud").length == readIndex){
             readIndex = 0;
         }
@@ -112,13 +114,15 @@ function desmarca(){
 }
 
 function marca(){
-    if(checkRead){
-
+    if(checkRead || ajuda){
+        readIndex = 0
     }   else{
         let paragrafo = document.getElementsByClassName("read-aloud")[readIndex]
+        anterior = paragrafo.cloneNode(true)
         paragrafo.style.borderRadius = "25px"
         paragrafo.style.padding = "10px"
         paragrafo.style.background = "rgba(29,117,249,0.31415)"
+        debugger
     }
 
     return
@@ -142,7 +146,6 @@ function handleBoundary(event) {
       const match = text.substring(wordStart).match(/^[a-z\d']*/i);
       wordLength = match[0].length;
     }
-    // wrap word in <mark> tag
     const wordEnd = wordStart + wordLength;
     const word = text.substring(wordStart, wordEnd);
     const markedText = text.substring(0, wordStart) + '<b>' + word + '</b>' + text.substring(wordEnd);
@@ -831,13 +834,21 @@ function readAloudInit(o, r,t,  texto) {
         var n;
         return Promise.all([l && l.ready(i), !window.jQuery && h("https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js").then(eval)]).then(function(e) {
             n = e[0];
-            if (texto!=""){
+
+            if(texto == "Olá, sou Voz Para Todos, uma ferramenta de acessibilidade."){
+                ajuda = true
+            }   else{
+                ajuda = false
+            }
+            
+            if (texto != ""){
                 var e = texto;
                 checkRead = true;
-            } else {
+            }else {
                 checkRead = false;
                 var e = "function" == typeof readAloudGetText ? readAloudGetText(jQuery) : new ReadAloudDoc(jQuery).getTexts().join("\n\n");
             }
+
             return Promise.all([n ? e : (e = e,
             function(o, r) {
                 return new Promise(function(e, t) {
