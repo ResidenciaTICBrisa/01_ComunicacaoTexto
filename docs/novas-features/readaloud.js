@@ -28,7 +28,6 @@ function marca(){
         paragrafo.style.borderRadius = "25px"
         paragrafo.style.padding = "10px"
         paragrafo.style.background = "rgba(29,117,249,0.31415)"
-        debugger
     }
 
     return
@@ -101,7 +100,6 @@ function ReadAloudWebSpeech() {
             
             marca()
             readIndex++
-            //debugger
             return o.onend = n,
             o.onerror = function(e) {
                 console.error(e.error)
@@ -264,7 +262,7 @@ function ReadAloudWebSpeech() {
         t = c.lang,
         n = /^zh|ko|ja/.test(t),
         o = new (n ? p : f),
-        i = c.isGoogleNative ? new h((/^(de|ru|es|id)/.test(t) ? 32 : 36) * (n ? 2 : 1) * c.effectiveRate,o).breakText(e) : o.getParagraphs(e),
+        i = o.getParagraphs(e),
         a = 0,
         s.dispatchEvent(new Event("timeupdate")),
         s.dispatchEvent(new Event("canplay"))
