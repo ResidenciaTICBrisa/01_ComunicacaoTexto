@@ -2,6 +2,7 @@ let readIndex = 0
 let checkRead = false
 let ajuda = false
 let anterior
+let leitor
 
 function desmarca(){
     if(checkRead || ajuda){
@@ -34,6 +35,7 @@ function marca(){
 }
 
 function handleBoundary(event) {
+    console.log("palavra")
     if (event.name === 'sentence') {
       // we only care about word boundaries
       return;
@@ -87,8 +89,12 @@ function ReadAloudWebSpeech() {
             o.lang = t.lang,
             o.pitch = t.pitch,
             o.rate = t.effectiveRate,
-            o.addEventListener('boundary', handleBoundary),
             o.volume = t.volume;
+
+            if(!checkRead){
+                o.addEventListener('boundary', handleBoundary)
+            }
+
             e = new Promise(function(e) {
                 o.onstart = e
             }
@@ -100,6 +106,7 @@ function ReadAloudWebSpeech() {
             
             marca()
             readIndex++
+            leitor = o
             return o.onend = n,
             o.onerror = function(e) {
                 console.error(e.error)
