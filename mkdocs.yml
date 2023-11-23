@@ -20,13 +20,15 @@ nav:
     - Reunião 11: atas/ata-reuniao11.md
     - Reunião 12: atas/ata-reuniao12.md
     - Reunião 13: atas/ata-reuniao13.md
+    - Reunião 14: atas/ata-reuniao14.md
+    - Reunião 15: atas/ata-reuniao15.md
   - Requisitos: requisitos/requisitos-plug.md
   - Plugins: plug-in/lista.md
   - Teste dos plugins:
     - Roteiro de testes: testes/roteiro-testes.md
     - Testes: testes/testes-lista.md
   - Configuração de ambiente: estudos/tutorial-ambiente-decidim.md
-  - Novas features:
+  - Principais features:
     - Marcação de palavra por palavra: novas-features/palavra-por-palavra.md
     - Leitura do texto selecionado: novas-features/leitura-do-texto-selecionado.md
     - Marcação dos parágrafos: novas-features/marcacao-dos-paragrafos.md
@@ -40,3 +42,5 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+  favicon: imagens/logo-vpt.svg
+  logo: imagens/logo-vpt.svg

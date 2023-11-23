@@ -15,7 +15,7 @@
         <link rel="next" href="../leitura-do-texto-selecionado/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../imagens/logo-vpt.svg">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
@@ -93,8 +93,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Documentação - Comunicação para Além do Texto" class="md-header__button md-logo" aria-label="Documentação - Comunicação para Além do Texto" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../imagens/logo-vpt.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -209,8 +208,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Documentação - Comunicação para Além do Texto" class="md-nav__button md-logo" aria-label="Documentação - Comunicação para Além do Texto" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../imagens/logo-vpt.svg" alt="logo">
 
     </a>
     Documentação - Comunicação para Além do Texto
@@ -582,6 +580,46 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunião 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas/ata-reuniao15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reunião 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -749,7 +787,7 @@
             
   
   <span class="md-ellipsis">
-    Novas features
+    Principais features
   </span>
   
 
@@ -759,7 +797,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Novas features
+            Principais features
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1064,16 +1102,18 @@
 <p>A modificação necessária foi realizada na função webSpeech, onde foi criado um evento para demarcar a leitura de cada palavra, e assim, realçar a palavra que está sendo lida no momento.</p>
 <pre><code>let readIndex = 0
 let checkRead = false
+let ajuda = false
 let anterior
 
 function desmarca(){
-    if(checkRead){
-
+    if(checkRead || ajuda){
+        readIndex = 0
     }   else{
         let paragrafoAnterior = document.getElementsByClassName(&quot;read-aloud&quot;)[readIndex-1]
         paragrafoAnterior.style.borderRadius = &quot;&quot;
         paragrafoAnterior.style.padding = &quot;&quot;
         paragrafoAnterior.style.background = &quot;&quot;
+        paragrafoAnterior.innerHTML = anterior.innerHTML
         if(document.getElementsByClassName(&quot;read-aloud&quot;).length == readIndex){
             readIndex = 0;
         }
@@ -1082,13 +1122,15 @@ function desmarca(){
 }
 
 function marca(){
-    if(checkRead){
-
+    if(checkRead || ajuda){
+        readIndex = 0
     }   else{
         let paragrafo = document.getElementsByClassName(&quot;read-aloud&quot;)[readIndex]
+        anterior = paragrafo.cloneNode(true)
         paragrafo.style.borderRadius = &quot;25px&quot;
         paragrafo.style.padding = &quot;10px&quot;
         paragrafo.style.background = &quot;rgba(29,117,249,0.31415)&quot;
+        debugger
     }
 
     return
@@ -1112,7 +1154,6 @@ function handleBoundary(event) {
       const match = text.substring(wordStart).match(/^[a-z\d']*/i);
       wordLength = match[0].length;
     }
-    // wrap word in &lt;mark&gt; tag
     const wordEnd = wordStart + wordLength;
     const word = text.substring(wordStart, wordEnd);
     const markedText = text.substring(0, wordStart) + '&lt;b&gt;' + word + '&lt;/b&gt;' + text.substring(wordEnd);
@@ -1801,13 +1842,21 @@ function readAloudInit(o, r,t,  texto) {
         var n;
         return Promise.all([l &amp;&amp; l.ready(i), !window.jQuery &amp;&amp; h(&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;).then(eval)]).then(function(e) {
             n = e[0];
-            if (texto!=&quot;&quot;){
+
+            if(texto == &quot;Olá, sou Voz Para Todos, uma ferramenta de acessibilidade.&quot;){
+                ajuda = true
+            }   else{
+                ajuda = false
+            }
+
+            if (texto != &quot;&quot;){
                 var e = texto;
                 checkRead = true;
-            } else {
+            }else {
                 checkRead = false;
                 var e = &quot;function&quot; == typeof readAloudGetText ? readAloudGetText(jQuery) : new ReadAloudDoc(jQuery).getTexts().join(&quot;\n\n&quot;);
             }
+
             return Promise.all([n ? e : (e = e,
             function(o, r) {
                 return new Promise(function(e, t) {

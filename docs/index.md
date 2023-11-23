@@ -1,7 +1,7 @@
 # Comunicação para além do texto | VozParaTodos
 
 <div align="center">
-  <img src="https://cdn.pixabay.com/photo/2017/04/11/22/25/megaphone-2223049_1280.png" alt="Logo VozParaTodos" width="250" height="250">
+  <img src="./imagens/logo-vpt.svg" alt="Logo VozParaTodos" width="250" height="250">
 </div>
 
 ## Visão geral
